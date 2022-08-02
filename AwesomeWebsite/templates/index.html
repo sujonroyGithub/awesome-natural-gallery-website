@@ -1,3 +1,32 @@
 {% extends 'basic.html' %}
 {% block title %} Awesome Website Home {% endblock title %}
-{% block body %} This is my Home page should make  {% endblock body %}
+{% block body %}
+{% load static %}
+<style>
+#benner{
+   
+   background-image:url("{% static '/media/animal6.jpg' %}");
+   background-position: center;
+   transition: 2s;
+   background-repeat: no-repeat;
+   background-size: cover;
+   color: rgb(242, 7, 7);
+   border: 5px solid rgb(19, 122, 232);
+}
+.benner-container{
+   height: 100vh;
+}
+</style>
+
+        
+        <section id="benner">
+            <div class="benner-container d-flex justify-content-center align-items-center">
+                <div class="benner-body text-center">
+                    <p>Welcome to My Animal gellary</p>
+                </div>
+            </div>
+        </section> 
+       
+    
+    
+{% endblock body %}
